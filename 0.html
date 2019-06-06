@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	//0 задание
+	//создайте переменную array, сохраните в нее пустой массив.
+      let hp = 200
+      let array = [
+        { 
+        	name:"02",
+        	hp:150,
+        	power:"franxx",
+        	url:"02.jpg",
+        	shoot:function(arg){
+            arg.hp = arg.hp - 10
+        	}
+        	
+
+	
+	
+    },
+
+       { 
+	       name:"Iron-man",
+	       hp:200,
+	       power:"he's cool<3",
+	       url:"IM.jpg",
+           shoot:function(){
+           arg.hp = arg.hp - 10
+ 
+        	}
+	       
+	
+   },
+
+        { 
+          name:"Spiderman",
+          hp:150,
+          power:"spiderweb",
+          url:"sm.jpg",
+          shoot:function(){
+          arg.hp = arg.hp - 10
+        	}
+
+
+    }
+    ]
+    for(let index = 0; index<3; index = index + 1){//цикл
+    let name_02 = document.createElement("h1")
+    document.body.appendChild(name_02)
+
+    let elem = document.createElement("img")
+    document.body.appendChild(elem)
+    elem.src = array[index].url 
+    elem.style.height = 250 + "px"
+    let hp_02 = document.createElement("h3")
+    document.body.appendChild(hp_02)
+    let power_02 = document.createElement("h2")
+    document.body.appendChild(power_02)
+    
+    name_02.innerHTML = array[index].name
+    
+    power_02.innerHTML = array[index].power
+
+    hp_02.innerHTML = array[index].hp
+
+	}
+
+
+
+
+	
+</script>
+</body>
+</html>
